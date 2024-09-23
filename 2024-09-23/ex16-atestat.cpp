@@ -37,6 +37,7 @@ void inserezLinie(int l) {
         }
         a[l-1][j] = 0;
     }
+    n++;
 }
 
 int main() {
