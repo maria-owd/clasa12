@@ -1,15 +1,16 @@
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 using namespace std;
 
 /**
-* Eliminati o coloana data dintr-o matrcie.
+*   Inserati intr-o matrice o coloana data cu elemente 0.
 */
 
 int a[10][10], n, m;
 
 void citire() {
-    ifstream f("date.in");
+    ifstream f("date18.in");
     f >> n >> m;
 
     for (int i = 0; i < n; i++) {
@@ -23,26 +24,27 @@ void afisare() {
     cout << "Matricea este: " << endl;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            cout << a[i][j] << " ";
+            cout << setw(3) << a[i][j] << " ";
         }
         cout << endl;
     }
 }
 
-void eliminCol(int c) {
-    for (int j = c; j < m - 1; j++) {
-        for (int i = 0; i < n; i++) {
-            a[i][j] = a[i][j+1];
+void inserezColoana(int c) {
+    for (int i = 0; i < n; i++) {
+        for (int j = m; j >= c; j--) {
+            a[i][j+1] = a[i][j];
         }
+        a[i][c] = 0;
     }
-    m--;
+    m++;
 }
 
 int main() {
     citire();
     afisare();
-    eliminCol(1);
-    cout << "Matricea dupa eliminare: ";
+    inserezColoana(2);
+    cout << "Noua matrice: ";
     afisare();
 
     return 0;

@@ -11,7 +11,7 @@ int a[10][10], n;
 int maxim;
 
 void citire() {
-    ifstream f("date1.in");
+    ifstream f("date15.in");
     f >> n;
 
     for (int i = 0; i < n; i++) {

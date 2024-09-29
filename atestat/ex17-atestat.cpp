@@ -9,7 +9,7 @@ using namespace std;
 */
 
 void citire(int v[], int &n, int &nr) {
-    ifstream f("date.in");
+    ifstream f("date17.in");
     f >> n;
 
     for (int i = 0; i < n; i++) {

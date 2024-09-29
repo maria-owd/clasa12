@@ -7,5 +7,6 @@
 !**/*.html
 .DS_Store
 *.out
+*.zip
 **/tempCodeRunnerFile.cpp
 *tempCodeRunnerFile.cpp
