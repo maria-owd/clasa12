@@ -7,7 +7,7 @@ using namespace std;
 *   intersectia lor.
 */
 
-ifstream f("date.in");
+ifstream f("date13.in");
 
 void citire(int v[], int &n) {
     f >> n;

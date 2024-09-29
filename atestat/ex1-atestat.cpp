@@ -10,7 +10,7 @@ using namespace std;
 int n, unice;
 float v[31];
 
-ifstream f("date.in");
+ifstream f("date1.in");
 
 bool exista(int x) {
     for (int i = 0; i < unice; i++) {

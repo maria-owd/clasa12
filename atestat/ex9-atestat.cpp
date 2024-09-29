@@ -4,13 +4,13 @@
 using namespace std;
 
 /**
-* Sa se scrie un program care interschimba intr-o matrice data doua coloane date.
+* Sa se scrie un program care interschimba intr-o matrice data doua linii date.
 */
 
 int n, m;
 int a[30][30];
 
-ifstream f("date.in");
+ifstream f("date9.in");
 
 void citire() {
     f >> n >> m;
@@ -32,22 +32,22 @@ void afisare() {
     cout << endl;
 }
 
-void schimbaColoana(int c1, int c2) {
+void schimbaLinie(int l1, int l2) {
     int aux;
 
-    cout << "schimb coloana " << c1 << " cu coloana " << c2 << endl;
-    for (int i = 0; i < n; i++) {
-       // cout << a[i][c1] << " " << a[i][c2] << endl;
-        aux = a[i][c1];
-        a[i][c1] = a[i][c2];
-        a[i][c2] = aux;
+    cout << "schimb linia " << l1 << " cu linia " << l2 << endl;
+    for (int j = 0; j < m; j++) {
+        //cout << a[l1][j] << " " << a[l2][j] << endl;
+        aux = a[l1][j];
+        a[l1][j] = a[l2][j];
+        a[l2][j] = aux;
     }
 }
 
 int main() {
     citire();
     afisare();
-    schimbaColoana(1,2);
+    schimbaLinie(1,2);
     afisare();
 
     return 0;
